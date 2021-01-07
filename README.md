@@ -10,7 +10,7 @@ por exemplo, encontrei as seguintes alterações de CLI de fluxo de ar:
 | initdb     | db init       |
 | flower     | celery flower |
 | worker     | celery worker |
-|----------------------------|
+
 
 Na primeira execução, você precisará inicializar o banco de dados, o que pode ser feito executando este comando. Você só precisa
 para executar isso uma vez ou toda vez que você excluir os contêineres/volumes - os dados devem persistir entre a parada e início do contêiner.
