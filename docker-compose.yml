@@ -13,6 +13,7 @@ x-apache-airflow-base: &apache-airflow-base
     - ./dags:/opt/airflow/dags
     - ./airflow-logs:/opt/airflow/logs
     - ./scripts:/opt/airflow/scripts
+    - ./config:/opt/airflow/
   depends_on:
     - postgres
     - redis
@@ -27,7 +28,8 @@ services:
       PGDATA: /var/lib/postgresql/data/pgdata
     volumes:
       - ./pgdata:/var/lib/postgresql/data/pgdata
-
+    ports:
+      - 5432:5432  
   redis:
     image: redis:5
     environment:
